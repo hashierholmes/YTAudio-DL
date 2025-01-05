@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>YTAudio Downloader</title>
+</head>
+<body>
+  <div class="container">
+    <h1>YTAudio Downloader</h1>
+    <form id="downloadForm" method="POST" action="/download">
+      <label for="url">YouTube Video Link</label>
+      <input type="url" id="url" name="url" placeholder="Enter YouTube video URL" required>
+
+      <label for="format">Format</label>
+      <select id="format" name="format" required>
+        <option value="mp3">Audio Only (MP3)</option>
+      </select>
+
+      <button type="submit">Download</button>
+    </form>
+    <p class="processing" id="processingMessage">Processing... Please wait.</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
